@@ -1,0 +1,63 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Untitled Page</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body background="Image/background.jpg">
+    <form id="form1" runat="server">
+    <div> <p align="center" style="width: 1000px">
+        <table align="center" style="width: 1000px;">
+            <tr>
+                <td colspan="3">
+                    <asp:Image ID="Image1" runat="server" ImageUrl="~/Image/N.jpg" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &nbsp;</td>
+                <td>
+                    <asp:Menu ID="Menu3" runat="server" BackColor="#FFFBD6" 
+                        DynamicHorizontalOffset="2" Font-Bold="True" Font-Names="Verdana" 
+                        Font-Size="Large" ForeColor="#990000" Orientation="Horizontal" 
+                        StaticSubMenuIndent="10px">
+                        <StaticSelectedStyle BackColor="#FFCC66" />
+                        <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                        <DynamicHoverStyle BackColor="#990000" ForeColor="White" />
+                        <DynamicMenuStyle BackColor="#FFFBD6" />
+                        <DynamicSelectedStyle BackColor="#FFCC66" />
+                        <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                        <StaticHoverStyle BackColor="#990000" ForeColor="White" />
+                        <Items>
+                            <asp:MenuItem NavigateUrl="~/Home.aspx" Text="Home" Value="Home"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/StudentReg.aspx" Text="Registration" 
+                                Value="Registration"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/StudentLogin.aspx" Text="Student Login" 
+                                Value="Student Login"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/TeacherLogin.aspx" Text="TeacherLogin" 
+                                Value="TeacherLogin"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/AdminLogin.aspx" Text="Admin" Value="Admin">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/F.aspx" Text="FAQ" Value="FAQ"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/ContactUs.aspx" Text="ContactUs" Value="ContactUs">
+                            </asp:MenuItem>
+                        </Items>
+                    </asp:Menu>
+                        </td>
+                <td>
+                    &nbsp;</td>
+            </tr>
+        </table>
+        </p>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        
+    </div>
+    </form>
+</body>
+</html>
